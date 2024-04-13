@@ -1,0 +1,14 @@
+{
+  "name": "js-speeder",
+  "version": "1.0.0",
+  "description": "js-speeder is a library built in typescript and can be used for speed your dev with more useful function, it can be used in both Javascript and Typescript",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "TP DevWorks",
+  "license": "ISC"
+}
