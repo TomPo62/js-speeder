@@ -1,0 +1,23 @@
+# Exclure les fichiers et dossiers de source
+/src/
+/tests/
+
+# Exclure les fichiers de configuration
+tsconfig.cjs.json
+tsconfig.esm.json
+tsconfig.json
+.npmignore
+.gitignore
+.babelrc
+
+# Exclure les dossiers de développement
+node_modules/
+coverage/
+test/
+tests/
+__tests__/
+
+# Exclure les fichiers log et autres fichiers non essentiels
+*.log
+*.tgz
+*.zip

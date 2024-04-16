@@ -3,12 +3,44 @@
   "version": "1.0.0",
   "description": "js-speeder is a library built in typescript and can be used for speed your dev with more useful function, it can be used in both Javascript and Typescript",
   "type": "module",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": "./dist/index.js"
+  },
+  "files": [
+    "dist/**/*"
+  ],
   "scripts": {
-    "build": "tsc",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "npm run clean && tsc",
+    "clean": "rimraf dist",
+    "test": "jest",
+    "prepublishOnly": "npm run test && npm run build"
+  },
+  "jest": {
+    "setupFiles": [
+      "jest-fetch-mock/setupJest"
+    ],
+    "preset": "ts-jest",
+    "testEnvironment": "jsdom",
+    "testMatch": [
+      "**/*.test.ts"
+    ]
   },
   "author": "TP DevWorks",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jest": "^26.x",
+    "jest": "^26.x",
+    "jest-fetch-mock": "^3.0.3",
+    "ts-jest": "^26.x",
+    "typescript": "^4.x"
+  },
+  "keywords": [
+    "typescript",
+    "javascript",
+    "utility",
+    "dev tools"
+  ]
 }
